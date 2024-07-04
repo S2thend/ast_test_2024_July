@@ -81,12 +81,12 @@ You'll be writing a function to generate code, and we'll be writing a test as we
 
 After completing the function, parameterize (meaning make function arguments to make dynamic) the following properties, so that a developer can use this method to generate many of these hooks. Be sure to include parameterization of these fields:
 
-- [ ] Query interface (`UsePoolsQuery`)
-- [ ] hook name (`usePools`)
-- [ ] request type (`QueryPoolsRequest`)
-- [ ] response type (`QueryPoolsResponse`)
-- [ ] queryService method name (`queryService.pools()`)
-- [ ] key name  (`poolsQuery`)
+- [x] Query interface (`UsePoolsQuery`)
+- [x] hook name (`usePools`)
+- [x] request type (`QueryPoolsRequest`)
+- [x] response type (`QueryPoolsResponse`)
+- [x] queryService method name (`queryService.pools()`)
+- [x] key name  (`poolsQuery`)
 
 #### bonus
 
