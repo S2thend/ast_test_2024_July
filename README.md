@@ -90,5 +90,5 @@ After completing the function, parameterize (meaning make function arguments to 
 
 #### bonus
 
-- [ ] add a test case in a new test that uses all methods from [`./example-methods.json`](./example-methods.json)
-- [ ] in the test case, use `expect(resultingCode).toMatchSnapshot()` and save the snapshot for all the code
+- [x] add a test case in a new test that uses all methods from [`./example-methods.json`](./example-methods.json)
+- [x] in the test case, use `expect(resultingCode).toMatchSnapshot()` and save the snapshot for all the code

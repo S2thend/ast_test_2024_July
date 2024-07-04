@@ -138,11 +138,13 @@ export const astCodeSnippet = t.file(t.program(
  */
 
 export const createQueryScript = (
-  QUERY_INTERFANCE = 'UsePoolsQuery',
-  HOOK_NAME = "usePools",
-  REQUEST_TYPE = "QueryPoolsRequest",
-  RESPONSE_TYPE = "QueryPoolsResponse", 
-  QUERY_SERVICE_METHOD_NAME = "pools"
+  {
+    QUERY_INTERFANCE = 'UsePoolsQuery',
+    HOOK_NAME = "usePools",
+    REQUEST_TYPE = "QueryPoolsRequest",
+    RESPONSE_TYPE = "QueryPoolsResponse", 
+    QUERY_SERVICE_METHOD_NAME = "pools"
+  }
 )=>{
   const optionalProperty = t.tsPropertySignature(
       t.identifier('request'),
@@ -261,4 +263,23 @@ export const createQueryScript = (
        usePoolsVariableDeclaration
     ]
   ))
+}
+
+
+
+
+export const createQueryScripts= (input) => {
+  const methods = []
+  // const queries = JSON.parse(input)
+  for(const [key, value] of Object.entries(input)){
+    methods.push(
+        createQueryScript(
+          {
+            REQUEST_TYPE:value.requestType,
+            RESPONSE_TYPE:value.responseType
+          }
+        )
+    )
+  }
+  return methods
 }
